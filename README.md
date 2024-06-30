@@ -22,7 +22,8 @@ B. Hasil deploy Aplikasi
    ![deploy 01](https://github.com/fatih-sudo/Hackathon-Semesta6-Sysadmin/assets/152350197/f4e778ee-197d-4804-a4fc-95ef8432e97d)
 
 2. Aplikasi 02
-   
+   ![deploy 02](https://github.com/fatih-sudo/Hackathon-Semesta6-Sysadmin/assets/152350197/54417963-db5b-496b-9592-73336e6b8ba2)
+
 
 
 
