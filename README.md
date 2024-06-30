@@ -1,2 +1,3 @@
 # Hackathon-Semesta6-Sysadmin
-“HackathonSemestaSysadmin
+HackathonSemestaSysadmin
+HackathonSemesta2024
