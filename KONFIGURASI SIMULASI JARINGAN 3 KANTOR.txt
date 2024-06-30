@@ -1,0 +1,167 @@
+Router Jakarta :
+
+- config dhcp :
+
+ip dhcp pool lantai01
+ network 192.168.10.0 255.255.255.0
+ default-router 192.168.10.1
+ip dhcp pool lantai02
+ network 192.168.20.0 255.255.255.0
+ default-router 192.168.20.1
+ip dhcp pool server01
+ network 45.45.45.0 255.255.255.0
+ default-router 45.45.45.1
+ dns-server 8.8.8.8
+
+- config ip add :
+
+interface FastEthernet0/0
+ ip address 192.168.10.1 255.255.255.0
+ duplex auto
+ speed auto
+!
+interface FastEthernet1/0
+ ip address 192.168.20.1 255.255.255.0
+ duplex auto
+ speed auto
+!
+interface Ethernet2/0
+ ip address 45.45.45.1 255.255.255.0
+ duplex auto
+ speed auto
+!
+interface Serial3/0
+ no ip address
+ clock rate 2000000
+!
+interface FastEthernet4/0
+ ip address 30.30.30.1 255.255.255.0
+
+- config Routing Rip :
+
+router rip
+ version 2
+ network 25.0.0.0
+ network 30.0.0.0
+ network 35.0.0.0
+ network 45.0.0.0
+ network 192.168.1.0
+ network 192.168.5.0
+ network 192.168.20.0
+ network 192.168.25.0
+ network 192.168.30.0
+ network 192.168.40.0
+
+Router Bandung 
+
+- config dhcp :
+
+ip dhcp pool Lantai01
+ network 192.168.30.0 255.255.255.0
+ default-router 192.168.30.1
+ip dhcp pool lantai02
+ network 192.168.40.0 255.255.255.0
+ default-router 192.168.40.1
+ip dhcp pool server01
+ network 35.35.35.0 255.255.255.0
+ default-router 35.35.35.1
+ dns-server 8.8.8.8
+
+- config ip add :
+
+interface FastEthernet0/0
+ ip address 192.168.30.1 255.255.255.0
+ duplex auto
+ speed auto
+!
+interface FastEthernet1/0
+ ip address 192.168.40.1 255.255.255.0
+ duplex auto
+ speed auto
+!
+interface Serial2/0
+ ip address 10.10.10.2 255.255.255.0
+!
+interface Serial3/0
+ ip address 20.20.20.1 255.255.255.0
+
+interface Ethernet6/0
+ ip address 35.35.35.1 255.255.255.0
+ duplex auto
+ speed auto
+
+- config routing rip :
+
+router rip
+ version 2
+ network 10.0.0.0
+ network 20.0.0.0
+ network 25.0.0.0
+ network 35.0.0.0
+ network 45.0.0.0
+ network 192.168.1.0
+ network 192.168.25.0
+ network 192.168.30.0
+ network 192.168.40.0
+ network 192.168.50.0
+
+Router Surabaya :
+
+- config dhcp :
+
+ip dhcp pool lantai01
+ network 192.168.50.0 255.255.255.0
+ default-router 192.168.50.1
+ip dhcp pool lantai02
+ network 192.168.60.0 255.255.255.0
+ default-router 192.168.60.1
+ip dhcp pool SERVER01
+ network 25.25.25.0 255.255.255.0
+ default-router 25.25.25.1
+ dns-server 255.255.255.2
+
+- config ip add :
+
+interface FastEthernet0/0
+ ip address 192.168.50.1 255.255.255.0
+
+interface FastEthernet1/0
+ ip address 192.168.60.1 255.255.255.0
+ 
+interface Serial3/0
+ ip address 20.20.20.2 255.255.255.0
+ clock rate 2000000
+
+interface FastEthernet4/0
+ ip address 30.30.30.2 255.255.255.0
+
+interface Ethernet6/0
+ ip address 25.25.25.1 255.255.255.0
+
+- Config Routing Rip :
+
+router rip
+ version 2
+ network 20.0.0.0
+ network 25.0.0.0
+ network 30.0.0.0
+ network 35.0.0.0
+ network 45.0.0.0
+ network 192.168.10.0
+ network 192.168.30.0
+ network 192.168.40.0
+ network 192.168.50.0
+ network 192.168.60.0
+
+
+
+
+
+
+
+
+
+
+
+
+
